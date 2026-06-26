@@ -22,6 +22,10 @@ body {
   color: var(--color-arctic);
 }
 
+.billing-toggle:checked ~ .toggle-track .toggle-knob {
+  transform: translateX(1.5rem);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

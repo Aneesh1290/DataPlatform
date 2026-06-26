@@ -37,13 +37,13 @@ export default function Pricing() {
       </div>
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center mb-16 gap-6">
         <label className="flex items-center cursor-pointer group">
-          <input type="checkbox" className="sr-only peer" onChange={handleBillingToggle} />
+          <input type="checkbox" className="sr-only peer billing-toggle" onChange={handleBillingToggle} />
           <span className="text-mystic-mint mr-4 font-medium transition-colors peer-checked:text-opacity-70">Monthly</span>
-          <div className="relative w-14 h-8 bg-nocturnal border border-oceanic-noir rounded-full peer-checked:bg-oceanic-noir transition-colors duration-300">
-            <div className="absolute left-1 top-1 w-6 h-6 bg-forsythia rounded-full transition-transform duration-300 peer-checked:translate-x-6 shadow-md"></div>
+          <div className="relative w-14 h-8 bg-nocturnal border border-oceanic-noir rounded-full transition-colors duration-300 toggle-track">
+            <div className="absolute left-1 top-1 w-6 h-6 bg-forsythia rounded-full transition-transform duration-300 shadow-md toggle-knob"></div>
           </div>
           <span className="text-mystic-mint ml-4 font-medium transition-colors group-hover:text-arctic">Annual</span>
-          <span className="ml-3 px-3 py-1 text-xs font-bold text-nocturnal bg-forsythia rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-300 shadow-sm shadow-forsythia/20">
+          <span className="ml-3 px-3 py-1 text-xs font-bold text-nocturnal bg-forsythia rounded-full transition-opacity duration-300 shadow-sm shadow-forsythia/20">
             Save 20%
           </span>
         </label>
