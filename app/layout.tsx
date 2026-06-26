@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "DataPlatform — Automate Everything. Scale Without Limits.",
   description: "The AI-native data platform that turns complex workflows into competitive advantage.",
   alternates: {
-    canonical: "https://example.com/pricing",
+    canonical: "https://dataplatform1.vercel.app",
   },
   openGraph: {
     title: "DataPlatform — Automate Everything. Scale Without Limits.",
     description: "The AI-native data platform that turns complex workflows into competitive advantage.",
-    url: "https://your-deployment-url.vercel.app",
+    url: "https://dataplatform1.vercel.app",
     type: "website",
     images: [
       {
