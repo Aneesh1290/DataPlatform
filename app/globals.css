@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-forsythia: #FFC801;
+  --color-nocturnal: #114C5A;
+  --color-arctic: #F1F6F4;
+  --color-mystic-mint: #D9E8E2;
+  --color-deep-saffron: #FF9932;
+  --color-oceanic-noir: #172B36;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #172B36;
+  background-image: radial-gradient(circle, rgba(255,200,1,0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--color-arctic);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 200ms ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 150ms ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes spin-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-border {
+  position: relative;
+  overflow: hidden;
+  border: none !important;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%; right: -50%; bottom: -50%;
+  background: conic-gradient(from 0deg, var(--color-forsythia), var(--color-deep-saffron), var(--color-forsythia));
+  animation: spin-border 4s linear infinite;
+  z-index: 0;
+}
+
+.animated-border .inner-bg {
+  position: absolute;
+  inset: 2px;
+  background-color: var(--color-nocturnal);
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.animated-border > *:not(.inner-bg) {
+  z-index: 2;
+}
+
+.glow-card {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(17, 76, 90, 0.4) !important;
+  transition: all 150ms ease-out;
+}
+
+.glow-card:hover {
+  border: 1px solid rgba(255, 200, 1, 0.6) !important;
+  background-image: radial-gradient(circle at top left, rgba(255, 200, 1, 0.06), transparent 60%);
+  box-shadow: 0 0 24px rgba(255, 200, 1, 0.12), inset 0 0 24px rgba(255, 200, 1, 0.04);
+}
