@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://example.com/og-image.jpg",
+        url: "https://dataplatform1.vercel.app/og-image.jpg",
       },
     ],
   },
